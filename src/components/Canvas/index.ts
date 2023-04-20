@@ -1,0 +1,1 @@
+export { CanvasComponent as Canvas } from './Canvas.component';
