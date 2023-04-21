@@ -6,4 +6,10 @@ export const global = css`
     padding: 0;
     box-sizing: border-box;
   }
+
+  &:root {
+    --light-gray: rgb(242, 242, 249);
+    --gray: rgba(191, 192, 198);
+    --red: rgb(255, 0, 255);
+  }
 `;
