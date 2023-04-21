@@ -32,7 +32,7 @@ export const ColorPickerComponent: React.FC<ColorPickerProps> = ({
   const [rgb, setRgb] = useState<RgbaColor>(colord(color).toRgb());
   const [hex, setHex] = useState(colord(rgb).toHex());
 
-  const handleAccept = () => onAccept && onAccept(rgb);
+  const handleAccept = () => onAccept && onAccept(colord(rgb).toRgbString());
 
   const handleBaseColor = (hex: string) => {
     const newRgb = colord(hex).toRgb();
@@ -105,7 +105,25 @@ export const ColorPickerComponent: React.FC<ColorPickerProps> = ({
   const handleBlueClear = () => {
     setRgb((prev) => ({
       ...prev,
-      r: 0,
+      b: 0,
+    }));
+    const newHex = colord(rgb).toHex();
+    setHex(newHex);
+  };
+
+  const handleOpacity = (number: number) => {
+    setRgb((prev) => ({
+      ...prev,
+      a: number,
+    }));
+    const newHex = colord(rgb).toHex();
+    setHex(newHex);
+  };
+
+  const handleOpacityClear = () => {
+    setRgb((prev) => ({
+      ...prev,
+      a: 1,
     }));
     const newHex = colord(rgb).toHex();
     setHex(newHex);
@@ -156,7 +174,7 @@ export const ColorPickerComponent: React.FC<ColorPickerProps> = ({
               id="green"
               type="number"
               value={rgb.g}
-              inputProps={{ maxLength: 3 }}
+              inputProps={{ min: 0, max: 255 }}
               onChange={(e) => handleGreen(Number(e.target.value))}
               endAdornment={
                 <InputAdornment position="end">
@@ -171,7 +189,7 @@ export const ColorPickerComponent: React.FC<ColorPickerProps> = ({
               id="blue"
               type="number"
               value={rgb.b}
-              inputProps={{ maxLength: 3 }}
+              inputProps={{ min: 0, max: 255 }}
               onChange={(e) => handleBlue(Number(e.target.value))}
               endAdornment={
                 <InputAdornment position="end">
@@ -180,6 +198,21 @@ export const ColorPickerComponent: React.FC<ColorPickerProps> = ({
               }
             />
             <Label htmlFor="hex">Blue</Label>
+          </Setting>
+          <Setting>
+            <Input
+              id="opacity"
+              type="number"
+              value={rgb.a}
+              inputProps={{ min: 0, max: 1 }}
+              onChange={(e) => handleOpacity(Number(e.target.value))}
+              endAdornment={
+                <InputAdornment position="end">
+                  <CloseIcon onClick={handleOpacityClear} />
+                </InputAdornment>
+              }
+            />
+            <Label htmlFor="opacity">Opacity</Label>
           </Setting>
         </ManuaSettings>
         <BaseColorsContainer>

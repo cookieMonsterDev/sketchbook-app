@@ -20,17 +20,32 @@ export const Container = styled.dialog`
 
   [class$="react-colorful__alpha react-colorful__last-control"] {
     border-radius: 0;
+    
+    cursor: pointer;
+    &:active {
+      cursor: grab;
+    }
   }
 
   [class$="react-colorful__pointer react-colorful__saturation-pointer"] {
     width: 1rem;
     height: 1rem;
+
+    cursor: pointer;
+    &:active {
+      cursor: grab;
+    }
   }
 
   // Color liner
   [class$="react-colorful__pointer react-colorful__saturation-pointer"] {
     width: 1rem;
     height: 1rem;
+
+    cursor: pointer;
+    &:active {
+      cursor: grab;
+    }
   }
 `;
 
@@ -105,7 +120,7 @@ export const ManuaSettings = styled.section`
   grid-area: settings;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.6rem;
 `;
 
 export const Setting = styled.div`
@@ -114,7 +129,7 @@ export const Setting = styled.div`
 `;
 
 export const Label = styled.label`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 700;
   margin-left: 1rem;
 `;
@@ -133,6 +148,7 @@ export const Input = styled(FilledInput)`
   height: 2rem;
   width: 8rem;
   background: transparent;
+  font-size: 0.8rem;
 
   &:hover {
     background: transparent;
