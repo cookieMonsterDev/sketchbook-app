@@ -1,0 +1,1 @@
+export { ToolBarComponent as ToolBar } from './ToolBar.component';

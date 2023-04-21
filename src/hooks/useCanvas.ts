@@ -7,9 +7,20 @@ const useCanvas = () => {
   useEffect(() => {
     const canvas = canvasRef.current!;
     const context = canvas.getContext("2d");
-    canvas.height = 600;
-    canvas.width = 800;
+    canvas.height = window.innerHeight - 1;
+    canvas.width = window.innerWidth - 161;
     setContext(context);
+
+    const resize = () => {
+      canvas.height = window.innerHeight - 2;
+      canvas.width = window.innerWidth - 162;
+    };
+
+    window.addEventListener("resize", resize);
+
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
   }, [canvasRef]);
 
   return { canvasRef, context };

@@ -7,7 +7,6 @@ export const Container = styled.dialog`
   border-radius: 0.5rem;
   border: 1px solid rgba(180, 180, 180, 1);
   background: white;
-  font-family: "Pathway Extreme", sans-serif;
 
   [class$="react-colorful"] {
     gap: 0.5rem;
@@ -20,7 +19,7 @@ export const Container = styled.dialog`
 
   [class$="react-colorful__alpha react-colorful__last-control"] {
     border-radius: 0;
-    
+
     cursor: pointer;
     &:active {
       cursor: grab;
@@ -37,7 +36,6 @@ export const Container = styled.dialog`
     }
   }
 
-  // Color liner
   [class$="react-colorful__pointer react-colorful__saturation-pointer"] {
     width: 1rem;
     height: 1rem;

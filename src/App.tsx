@@ -1,13 +1,14 @@
 import { Canvas } from "./components/Canvas"
-import { ColorPicker } from "./components/ColorPicker";
+import { ToolBar } from "./components/ToolBar";
 import { Main } from "./styles/layout";
 
 
 const App = () => {
   return (
     <Main>
-      {/* <Canvas /> */}
-      <ColorPicker />
+      <ToolBar />
+      <Canvas />
+      {/* <ColorPicker /> */}
     </Main>
   );
 };
