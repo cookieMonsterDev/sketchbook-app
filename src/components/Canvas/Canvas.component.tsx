@@ -19,12 +19,14 @@ export const CanvasComponent: React.FC = () => {
     const ctx = context;
 
     if (!draw || !ctx) return;
+    const left = canvasRef.current?.offsetLeft;
+    const top = canvasRef.current?.offsetTop;
 
     ctx.lineWidth = 1;
     ctx.lineCap = "round";
     ctx.strokeStyle = settings.brush_color;
 
-    ctx.lineTo(e.clientX, e.clientY);
+    ctx.lineTo(e.clientX - (left || 0), e.clientY - (top || 0));
     ctx.stroke();
   };
 
