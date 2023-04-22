@@ -143,7 +143,7 @@ Error generating stack: `+i.message+`
   grid-template-areas:
     "title title"
     "slider values"
-    "colors colors"
+    "colors colors";
 `,wb=W.h2`
   grid-area: title;
   font-size: 0.8rem;
@@ -156,15 +156,15 @@ Error generating stack: `+i.message+`
   margin: 1rem 0;
   color: rgba(255, 255, 255, 1);
 
-  [class$="MuiSlider-rail css-qx5f9e-MuiSlider-rail"] {
+  .MuiSlider-rail css-qx5f9e-MuiSlider-rail {
     background: rgba(255, 255, 255, 0.6) !important;
   }
 
-  [class$="MuiSlider-track css-ada0pd-MuiSlider-track"] {
+  .MuiSlider-track css-ada0pd-MuiSlider-track {
     background: rgba(255, 255, 255, 1) !important;
   }
 
-  [class$="MuiSlider-thumb"] {
+  .MuiSlider-thumb {
     background: rgb(222, 170, 136, 1) !important;
     box-shadow: none !important;
 
@@ -173,7 +173,7 @@ Error generating stack: `+i.message+`
     }
   }
 
-  [class$="MuiSlider-valueLabel"] {
+  .MuiSlider-valueLabel {
     left: 30px !important;
     right: auto !important;
     width: 3rem !important;
@@ -193,7 +193,7 @@ Error generating stack: `+i.message+`
 `,Mp=W.div`
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   gap: 0.3rem;
 
   label {
