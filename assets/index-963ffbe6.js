@@ -157,30 +157,30 @@ Error generating stack: `+i.message+`
   color: rgba(255, 255, 255, 1);
 
   [class$="MuiSlider-rail css-qx5f9e-MuiSlider-rail"] {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.6) !important;
   }
 
   [class$="MuiSlider-track css-ada0pd-MuiSlider-track"] {
-    background: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 1) !important;
   }
 
   [class$="MuiSlider-thumb"] {
-    background: rgb(222, 170, 136, 1);
-    box-shadow: none;
+    background: rgb(222, 170, 136, 1) !important;
+    box-shadow: none !important;
 
     &:hover {
-      box-shadow: 0 0 0 10px rgb(222, 170, 136, 0.3);
+      box-shadow: 0 0 0 10px rgb(222, 170, 136, 0.3) !important;
     }
   }
 
   [class$="MuiSlider-valueLabel"] {
-    left: 30px;
-    right: auto;
-    width: 3rem;
+    left: 30px !important;
+    right: auto !important;
+    width: 3rem !important;
 
     &::before {
-      right: auto;
-      left: -3%;
+      right: auto !important;
+      left: -3% !important;
     }
   }
 `,bb=W.div`
@@ -395,6 +395,7 @@ Error generating stack: `+i.message+`
   font-size: 0.8rem;
   font-weight: 700;
   margin-left: 1rem;
+  color: black !important;
 `,jo=W(UC)`
   svg {
     cursor: pointer;
