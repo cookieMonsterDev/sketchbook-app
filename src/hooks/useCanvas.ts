@@ -17,9 +17,11 @@ const useCanvas = () => {
     };
 
     window.addEventListener("resize", resize);
-
+    window.addEventListener("load", resize);
+    
     return () => {
       window.removeEventListener("resize", resize);
+      window.removeEventListener("load", resize);
     };
   }, [canvasRef]);
 
