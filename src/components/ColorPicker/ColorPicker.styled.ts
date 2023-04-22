@@ -132,6 +132,7 @@ export const Label = styled.label`
   font-size: 0.8rem;
   font-weight: 700;
   margin-left: 1rem;
+  color: black !important;
 `;
 
 export const Input = styled(FilledInput)`
