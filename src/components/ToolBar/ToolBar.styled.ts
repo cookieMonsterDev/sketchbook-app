@@ -6,10 +6,11 @@ export const Container = styled.menu`
   background: rgba(36, 34, 34, 1);
   display: flex;
   flex-direction: column;
+  padding: 0.5rem;
 `;
 
 export const Hr = styled.hr`
-  width: 80%;
+  width: 100%;
   align-self: center;
 `
 

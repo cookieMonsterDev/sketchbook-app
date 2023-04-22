@@ -19,7 +19,7 @@ import {
 } from "./ColorPicker.styled";
 import { ColorPickerProps } from "./ColorPicker.types";
 import CloseIcon from "@mui/icons-material/Close";
-import { baseColorsConfig } from "../../config";
+import { baseColorsConfig } from "./config";
 import { colord } from "colord";
 import { InputAdornment } from "@mui/material";
 

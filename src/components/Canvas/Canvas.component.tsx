@@ -22,7 +22,7 @@ export const CanvasComponent: React.FC = () => {
     const left = canvasRef.current?.offsetLeft;
     const top = canvasRef.current?.offsetTop;
 
-    ctx.lineWidth = 1;
+    ctx.lineWidth = settings.brush_size;
     ctx.lineCap = "round";
     ctx.strokeStyle = settings.brush_color;
 
@@ -32,6 +32,7 @@ export const CanvasComponent: React.FC = () => {
 
   return (
     <Canvas
+      id="canvas"
       ref={canvasRef}
       onMouseDown={startPosition}
       onMouseUp={endPosition}

@@ -5,8 +5,8 @@ export const Logo = styled.span`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0.5rem;
-
+  margin-bottom: 0.5rem;
+  
   a {
     cursor: pointer;
   }
