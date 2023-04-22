@@ -6,7 +6,7 @@ export const Container = styled.section`
   grid-template-areas:
     "title title"
     "slider values"
-    "colors colors"
+    "colors colors";
 `;
 
 export const Title = styled.h2`
@@ -23,15 +23,15 @@ export const SizeSlider = styled(Slider)`
   margin: 1rem 0;
   color: rgba(255, 255, 255, 1);
 
-  [class$="MuiSlider-rail css-qx5f9e-MuiSlider-rail"] {
+  .MuiSlider-rail css-qx5f9e-MuiSlider-rail {
     background: rgba(255, 255, 255, 0.6) !important;
   }
 
-  [class$="MuiSlider-track css-ada0pd-MuiSlider-track"] {
+  .MuiSlider-track css-ada0pd-MuiSlider-track {
     background: rgba(255, 255, 255, 1) !important;
   }
 
-  [class$="MuiSlider-thumb"] {
+  .MuiSlider-thumb {
     background: rgb(222, 170, 136, 1) !important;
     box-shadow: none !important;
 
@@ -40,7 +40,7 @@ export const SizeSlider = styled(Slider)`
     }
   }
 
-  [class$="MuiSlider-valueLabel"] {
+  .MuiSlider-valueLabel {
     left: 30px !important;
     right: auto !important;
     width: 3rem !important;
@@ -61,11 +61,10 @@ export const Values = styled.div`
   justify-content: space-around;
 `;
 
-
 export const Value = styled.div`
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   gap: 0.3rem;
 
   label {
@@ -76,4 +75,4 @@ export const Value = styled.div`
   span {
     color: rgb(222, 170, 136, 1);
   }
-`
+`;
