@@ -7,10 +7,4 @@ export const global = css`
     box-sizing: border-box;
     font-family: "Pathway Extreme", sans-serif;
   }
-
-  &:root {
-    --light-gray: rgb(242, 242, 249);
-    --gray: rgba(191, 192, 198);
-    --red: rgb(255, 0, 255);
-  }
 `;

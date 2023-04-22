@@ -8,8 +8,8 @@ export interface SettingsState {
 }
 
 const initialState: SettingsState = {
-  brush_color: "black",
-  background_color: "white",
+  brush_color: "rgba(0, 0, 0, 1)",
+  background_color: "rgba(255, 255, 255, 1)",
   brush_size: 3,
 };
 

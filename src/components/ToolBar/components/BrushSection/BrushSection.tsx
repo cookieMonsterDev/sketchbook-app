@@ -7,7 +7,8 @@ import {
   Values,
 } from "./BrushSection.styled";
 import { useAppDispatch, useAppSelector } from "../../../../hooks/storeHooks";
-import { changeBrushSize } from "../../../../store/slices/settings";
+import { changeBrushColor, changeBrushSize } from "../../../../store/slices/settings";
+import { ColorSelectComponent } from "../../../ColorSelect/ColorSelect.component";
 
 const BrushSection = () => {
   const settings = useAppSelector((state) => state.settings);
@@ -15,6 +16,10 @@ const BrushSection = () => {
 
   const handleSizeChange = (e: React.ChangeEvent<HTMLInputElement> | any) => {
     dispatch(changeBrushSize(Number(e.target.value)));
+  };
+
+  const handleColorChange = (e: string) => {
+    dispatch(changeBrushColor(e));
   };
 
   return (
@@ -36,7 +41,7 @@ const BrushSection = () => {
         </Value>
         <Value>
           <label>Color</label>
-          <span>{settings.brush_color}</span>
+          <ColorSelectComponent color={settings.brush_color} onChange={handleColorChange}/>
         </Value>
       </Values>
     </Container>

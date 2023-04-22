@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 export const Button = styled.a`
   padding: 0.3rem;
   width: 100%;
+  margin-top: 1rem;
   text-align: center;
   align-self: center;
   text-decoration: none;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RgbaColor, RgbaColorPicker } from "react-colorful";
 import {
   Header,
@@ -24,13 +24,19 @@ import { colord } from "colord";
 import { InputAdornment } from "@mui/material";
 
 export const ColorPickerComponent: React.FC<ColorPickerProps> = ({
-  color = "rgba(0, 0, 0, 1)",
+  color,
   onClose,
   onAccept,
   baseColors = baseColorsConfig,
+  show
 }) => {
-  const [rgb, setRgb] = useState<RgbaColor>(colord(color).toRgb());
-  const [hex, setHex] = useState(colord(rgb).toHex());
+  const [rgb, setRgb] = useState<RgbaColor>({r: 0, g: 0, b: 0, a: 0});
+  const [hex, setHex] = useState("");
+
+  useEffect(() => {
+    setRgb(colord(color).toRgb());
+    setHex(colord(color).toHex());
+  }, [color]);
 
   const handleAccept = () => onAccept && onAccept(colord(rgb).toRgbString());
 
@@ -130,7 +136,7 @@ export const ColorPickerComponent: React.FC<ColorPickerProps> = ({
   };
 
   return (
-    <Container open={true}>
+    <Container open={show}>
       <Header>
         <CloseIcon onClick={onClose} />
       </Header>

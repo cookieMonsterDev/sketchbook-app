@@ -8,7 +8,6 @@ const App = () => {
     <Main>
       <ToolBar />
       <Canvas />
-      {/* <ColorPicker /> */}
     </Main>
   );
 };

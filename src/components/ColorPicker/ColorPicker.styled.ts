@@ -2,7 +2,9 @@ import styled from "@emotion/styled";
 import { Button, FilledInput } from "@mui/material";
 
 export const Container = styled.dialog`
-  position: relative;
+  position: fixed;
+  inset: 0;
+  margin: auto;
   width: 30rem;
   border-radius: 0.5rem;
   border: 1px solid rgba(180, 180, 180, 1);
