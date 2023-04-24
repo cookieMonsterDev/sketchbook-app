@@ -36,7 +36,7 @@ const BrushSection = () => {
       />
       <Values>
         <Value>
-          <label>Sixe</label>
+          <label>Size</label>
           <span>{settings.brush_size}</span>
         </Value>
         <Value>
